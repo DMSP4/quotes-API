@@ -6,6 +6,13 @@ class Quote {
     this.isFavorited = false;
   }
 
+  formatText(){
+    return `${this.text}`;
+  }
+
+  formatAutor(){
+    return `© ${this.author}`;
+  }
  
 }
 
