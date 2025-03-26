@@ -24,18 +24,18 @@ class RandomQuotesApp {
     }
   }
 
-  getRandomQuote() {
+  randomQuoteHandler() {
     this.changeCurrentQuote(RandomQuote.getRandomeQuote());
   }
 
-  async getRandomQuoteViaApi() {
+  async randomQuoteViaApiHandler() {
     this.changeCurrentQuote(await RandomQuote.getRandomQuoteViaApi());
   }
 
   init() {
-    this.randomQuoteBtn.addEventListener("click", () => this.getRandomQuote());
+    this.randomQuoteBtn.addEventListener("click", () => this.randomQuoteHandler());
     this.randomQuoteApiBtn.addEventListener("click", () =>
-      this.getRandomQuoteViaApi()
+      this.randomQuoteViaApiHandler()
     );
   }
 }
