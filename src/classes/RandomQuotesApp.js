@@ -1,6 +1,5 @@
-import Quote from './Quote.js';
-import RandomQuote from './RandomQuote.js';
-
+import Quote from "./Quote.js";
+import RandomQuote from "./RandomQuote.js";
 
 class RandomQuotesApp {
   constructor() {
@@ -29,18 +28,16 @@ class RandomQuotesApp {
     this.changeCurrentQuote(RandomQuote.getRandomeQuote());
   }
 
-  getRandomQuoteViaApi() {
-    RandomQuote.getRandomQuoteViaApi().then((quote) => 
-      this.changeCurrentQuote(quote)
-    );
-
+  async getRandomQuoteViaApi() {
+    this.changeCurrentQuote(await RandomQuote.getRandomQuoteViaApi());
   }
 
   init() {
     this.randomQuoteBtn.addEventListener("click", () => this.getRandomQuote());
-    this.randomQuoteApiBtn.addEventListener("click", () => this.getRandomQuoteViaApi());
+    this.randomQuoteApiBtn.addEventListener("click", () =>
+      this.getRandomQuoteViaApi()
+    );
   }
 }
-
 
 export default RandomQuotesApp;
