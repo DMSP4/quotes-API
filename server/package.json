@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "quotes API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "expres"
+  ],
+  "author": "Prokopchuk",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
