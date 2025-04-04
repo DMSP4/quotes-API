@@ -5,14 +5,14 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 20px auto;
   text-align: center;
 }
 
 .btn {
   padding: 13px 20px;
-  margin: 0px 10px;
+  margin: 10px;
   font-size: 16px;
   color: white;
   border: none;
@@ -36,6 +36,15 @@ body {
 .btn-secondary:hover {
   background-color: #218838;
   border-color: #1e7e34;
+}
+
+.btn-ternary {
+  background-color: #ffc107;
+}
+
+.btn-ternary:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;;
 }
 
 .btn-danger {
