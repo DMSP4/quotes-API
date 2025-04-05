@@ -1,14 +1,9 @@
 import quotes from "../data/quotes.js";
 import MathUtils from "../utils/MathUtils.js";
 import Quote from "./Quote.js";
-// import config from "../../config.js";
+import config from "../../config.js";
 
-let config;
-try {
-  config = await import("../../config.prod.js");
-} catch (error) {
-  config = await import("../../config.js");
-}
+
 class RandomQuote {
   static getRandomeQuote() {
     const randomIndex = MathUtils.generateRandomInt(quotes.length);
